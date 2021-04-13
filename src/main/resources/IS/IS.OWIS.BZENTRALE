@@ -1,0 +1,113 @@
+V#22
+K#0#BZENTRALE#Benutzerzentrale#(65)#isrein/screen.OWIS.BZENTRALE#25B.1##
+K#(0)#(0)#100000##0#0#BZentrale#1
+K#0#(1)#
+K######
+K#######
+K#owis#(12)#12:11#(116)#(98)###0#0#
+K#########
+Z#0#itgrust##0####(0)######0#0#0#0##0##
+Z#0#itgruppe##0####(0)######0#2#0#0##0##
+Z#0#itgrbez##0####(0)######0#2#0#0##0##
+Z#0#itsn##0####(0)######0#0#0#0##0##
+Z#0#itid##0####(0)######0#2#0#0##0##
+Z#0#itdnr##0####(0)######0#0#0#0##0##
+Z#0#itdbez##0####(0)######0#2#0#0##0##
+Z#0#itschemaversion##0####(0)######0#0#0#0##0##
+Z#0#itobjgruppe##0####(0)######0#0#0#0##0##
+Z#0#itobjgrbez##0####(0)######0#2#0#0##0##
+Z#0#itobjdnr##0####(0)######0#0#0#0##0##
+Z#0#itobjdbez##0####(0)######0#2#0#0##0##
+Z#0#itobjinzeile##0####(0)######0#0#0#0##0##
+Z#0#itozeilen##0####(0)######0#0#0#0##0##
+Z#0#itdateiarchivieren##0####(0)######0#0#0#0##0##
+Z#0#itbudruck##0####(1)######0#0#0#0##0##
+Z#0#itbudruck2##0####(1)######0#0#0#0##0##
+Z#0#itbuinfosys##0####(1)######0#0#0#0##0##
+Z#0#itbuaktion##0####(1)######0#0#0#0##0##
+Z#0#itversionn##0####(0)######0#0#0#0##0##
+Z#0#itmarkiertzn##0####(2)######0#0#0#0##0##
+Z#0#itablagen##0####(0)######0#0#0#0##0##
+Z#0#itablagef##0####(0)######0#2#0#0##0##
+Z#0#itnum65##0####(0)######0#0#0#0##0##
+Z#0#itnummer##0####(0)######0#2#0#0##0##
+Z#0#itnummerb##0####(0)######0#2#0#0##0##
+Z#0#itsuch65##0####(0)######0#0#0#0##0##
+Z#0#itsuch##0####(0)######0#2#0#0##0##
+Z#0#itsuchb##0####(0)######0#2#0#0##0##
+Z#0#iearb##0####(0)######0#0#0#0##0##
+Z#0#ierangarb##0####(0)######0#0#0#0##0##
+Z#0#iedatname##0####(0)######0#0#0#0##0##
+Z#0#iedn##0####(0)######0#2#0#0##0##
+Z#0#iedatnr##0####(0)######0#2#0#0##0##
+Z#0#iegrp##0####(0)######0#0#0#0##0##
+Z#0#iegrliste##0####(0)######0#0#0#0##0##
+Z#0#iegrtxt##0####(0)######0#0#0#0##0##
+Z#0#iegrausw##0####(1)######0#0#0#0##0##
+Z#0#iebkopf##0####(1)######0#0#0#0##0##
+Z#0#iebfuss##0####(1)######0#0#0#0##0##
+Z#0#iegrkopf##0####(1)######0#0#0#0##0##
+Z#0#iegrfuss##0####(1)######0#0#0#0##0##
+Z#0#ietab##0####(1)######0#0#0#0##0##
+Z#0#iebtyp##0####(1)######0#0#0#0##0##
+Z#0#ieatyp##0####(1)######0#0#0#0##0##
+Z#0#ieageraet##0####(1)######0#0#0#0##0##
+Z#0#ieaparam##0####(1)######0#0#0#0##0##
+Z#0#iemaxlines##0####(1)######0#0#0#0##0##
+Z#0#ieanzstufen##0####(1)######0#0#0#0##0##
+Z#0#ietreeview##0####(0)######0#0#0#0##0##
+Z#0#ieabbrfrage##0####(1)######0#0#0#0##0##
+Z#0#iemaskennr##0####(0)######0#0#0#0##0##
+Z#0#ismenuetitel##0####(0)######0#0#0#0##0##
+Z#0#ismenuevorauswahl##0####(0)######0#0#0#0##0##
+Z#0#ismenuesofort##0####(0)######0#0#0#0##0##
+Z#0#ismenueokay##0####(1)######0#0#0#0##0##
+Z#0#ismenueabbruch##0####(1)######0#0#0#0##0##
+Z#0#iskmenueendeaktion##0####(0)######0#0#0#0##0##
+Z#0#isabbrfragetxt##0####(1)######0#0#0#0##0##
+Z#0#isisref##0####(0)######0#0#0#0##0##
+Z#0#isselect##0####(1)######0#0#0#0##0##
+Z#0#isauswahl##0####(1)######0#0#0#0##0##
+Z#0#isstufe##0####(1)######0#0#0#0##0##
+Z#0#isbstart##0####(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####0#0#0#0##0##
+Z#0#isstartzeit##0####(0)######0#0#0#0##0##
+Z#1#isybzentucm#GL25#0#UCM Datei#(65)#(65)#(2)######1#1#0#0##0##
+Z#1#isybzentucmwaehlen#BU3#0#UCM wÑhlen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isyabteilung#GL15#0#Abteilung#(65)#(65)#(2)######1#1#0#0##0##
+Z#1#isygenallucm#BU3#0#ALL.ucm erstellen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isydelucm#BU3#0#Arbeitsgruppenseite entfernen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isynewucmpos#I1#0#EinfÅgen an Position#(65)#(65)#(2)######1#1#0#0##0##
+Z#1#isyadducm#BU3#0#hinzufÅgen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isynewucm#GL15#0#Arbeitsgruppenseite hinzufÅgen#(65)#(65)#(2)######1#1#0#0##0##
+Z#0#ittabnr##1####(0)######0#0#0#0##0##
+Z#0#itzid##1####(0)######0#0#0#0##0##
+Z#0#itzn##1####(0)######0#0#0#0##0##
+Z#0#itbudruck##1####(1)######0#0#0#0##0##
+Z#0#itbudruck2##1####(1)######0#0#0#0##0##
+Z#0#itbuinfosys##1####(1)######0#0#0#0##0##
+Z#0#itbuaktion##1####(1)######0#0#0#0##0##
+Z#0#itmarkiert##1####(1)######0#0#0#0##0##
+Z#0#itmarkierung##1####(1)######0#0#0#0##0##
+Z#0#istbaumstufe##1####(0)######0#0#0#0##0##
+Z#0#istbaumstat##1####(0)######0#0#0#0##0##
+Z#0#istbaumaufzu##1####(1)######0#0#0#0##0##
+Z#0#istbaumtext##1####(0)######0#0#0#0##0##
+Z#0#istbauminfo##1####(0)######0#0#0#0##0##
+Z#0#istbaumicon##1####(0)######0#0#0#0##0##
+Z#0#istbaumiconz##1####(0)######0#2#0#0##0##
+Z#0#istmenuemoeglich##1####(0)######0#0#0#0##0##
+Z#0#istmenuean##1####(0)######0#0#0#0##0##
+Z#0#istmenueendeaktion##1####(0)######0#0#0#0##0##
+Z#2#isytbzentpasswort#P12:11#1#Passwortsatz#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentmitarbeiter#P11:1#1#Mitarbeiter#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentmitarbeitername#PT11:1#1#Mitarbeiter Name#(65)#(65)#(0)######1#3#0#0##0##
+Z#2#isytbzentfcmdpwgrp1#GL40#1#Datei Arbeitsgruppenseite 1#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp2#GL40#1#Datei Arbeitsgruppenseite 2#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp3#GL40#1#Datei Arbeitsgruppenseite 3#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp4#GL40#1#Datei Arbeitsgruppenseite 4#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp5#GL40#1#Datei Arbeitsgruppenseite 5#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp6#GL40#1#Datei Arbeitsgruppenseite 6#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp7#GL40#1#Datei Arbeitsgruppenseite 7#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp8#GL40#1#Datei Arbeitsgruppenseite 8#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp9#GL40#1#Datei Arbeitsgruppenseite 9#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytbzentfcmdpwgrp10#GL40#1#Datei Arbeitsgruppenseite 10#(65)#(65)#(0)######1#1#0#0##0##

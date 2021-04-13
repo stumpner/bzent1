@@ -1,0 +1,7 @@
+# If the erp base image is changed, the image has to be rebuild with
+# 'docker-compose build erp'
+FROM sdp.registry.abas.sh/abas/test:2018r4n14p45
+
+USER root
+# Disable DNS lookup in sshd.
+RUN echo 'UseDNS no' >> /etc/ssh/sshd_config

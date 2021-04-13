@@ -1,0 +1,47 @@
+image: openjdk:8
+
+options:
+  docker: true
+
+definitions:
+  services:
+    docker:
+      memory: 3072
+
+# TODO: In the Bitbucket Pipelines UI for your repository register your credentials for https://registry.abas.sh in Repository Settings > Pipelines > Repository variables as REGISTRY_USER and REGISTRY_PASSWORD
+pipelines:
+  default:
+    - step:
+        name: Build & Test
+        services:
+          - docker
+        script:
+          - chmod a+x initGradleProperties.sh
+          - DOCKER_ENV_HOST=$(ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}') ./initGradleProperties.sh
+          - cat gradle.properties
+          - docker login sdp.registry.abas.sh -u $REGISTRY_USER -p $REGISTRY_PASSWORD
+          - curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          - chmod +x /usr/local/bin/docker-compose
+          - docker-compose up -d
+          - ./gradlew checkPreconditions createEsdkApp
+          - ./gradlew instrumentJfopServer verify codeCoverageVerification
+        artifacts:
+          - build/**
+    - step:
+        name: ESDK App Installer Test
+        services:
+          - docker
+        script:
+          - chmod a+x initGradleProperties.sh
+          - DOCKER_ENV_HOST=$(ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}') ./initGradleProperties.sh
+          - echo mavenUser=$MAVEN_USERNAME >> gradle.properties
+          - echo mavenPassword=$MAVEN_PASSWORD >> gradle.properties
+          - docker login sdp.registry.abas.sh -u $REGISTRY_USER -p $REGISTRY_PASSWORD
+          - curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          - chmod +x /usr/local/bin/docker-compose
+          - docker-compose up -d
+          - ./gradlew installEsdkApp
+        artifacts:
+          - build/**
+
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frame SYSTEM "urn:x-abas.de:abasscreens-1.00.dtd">
+
+<frame customHelp="" frameType="M" msgId="bzentrale_owis$0" stdHelp="25B.1">
+ <layout.grid>
+  <metainfo axis="row" grid="0" stretch="zoom" />
+  <metainfo axis="column" grid="0" stretch="zoom" />
+  <cell alignX="fill" alignY="fill" gridX="0" gridY="0">
+   <layout.split axis="row">
+    <pane.split>
+     <layout.notebook>
+      <pane.notebook msgId="bzentrale_owis$1">
+       <layout.grid>
+        <metainfo axis="column" grid="2" indent="large" />
+        <cell alignY="beginning" gridX="0" gridY="0">
+         <label msgId="bzentrale_owis_fhead_ybzentucm" />
+        </cell>
+        <cell alignY="beginning" gridX="1" gridY="0">
+         <erpfield s3Name="0:ybzentucm" />
+         <erpfield dimX="0" msgId="bzentrale_owis_fhead_ybzentucmwaehlen" s3Name="0:ybzentucmwaehlen" />
+        </cell>
+        <cell alignY="beginning" gridX="2" gridY="0" />
+        <cell alignY="beginning" gridX="3" gridY="0" />
+        <cell alignY="beginning" gridX="0" gridY="1">
+         <label msgId="bzentrale_owis_fhead_yabteilung" />
+        </cell>
+        <cell alignY="beginning" gridX="1" gridY="1">
+         <erpfield s3Name="0:yabteilung" />
+        </cell>
+        <cell alignY="beginning" gridX="2" gridY="1" />
+        <cell alignY="beginning" gridX="3" gridY="1" />
+       </layout.grid>
+      </pane.notebook>
+      <pane.notebook msgId="bzentrale_owis$3">
+       <layout.grid>
+        <cell alignY="beginning" gridX="0" gridY="0">
+         <label msgId="bzentrale_owis_fhead_ynewucm" />
+        </cell>
+        <cell alignY="beginning" gridX="1" gridY="0">
+         <erpfield s3Name="0:ynewucm" />
+        </cell>
+        <cell alignY="beginning" gridX="2" gridY="0">
+         <label msgId="bzentrale_owis_fhead_ynewucmpos" />
+        </cell>
+        <cell alignY="beginning" gridX="3" gridY="0">
+         <erpfield s3Name="0:ynewucmpos" />
+        </cell>
+        <cell gridX="4" gridY="0">
+         <erpfield dimX="0" msgId="bzentrale_owis_fhead_yadducm" s3Name="0:yadducm" />
+        </cell>
+        <cell gridX="5" gridY="0">
+         <erpfield dimX="0" msgId="bzentrale_owis_fhead_ydelucm" s3Name="0:ydelucm" />
+        </cell>
+        <cell gridX="0" gridY="1" sizeX="6">
+         <label msgId="bzentrale_owis$4" />
+        </cell>
+       </layout.grid>
+      </pane.notebook>
+     </layout.notebook>
+    </pane.split>
+    <pane.split>
+     <table>
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentpasswort" s3Name="1:ytbzentpasswort" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentmitarbeiter" s3Name="1:ytbzentmitarbeiter" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentmitarbeitername" s3Name="1:ytbzentmitarbeitername" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp1" s3Name="1:ytbzentfcmdpwgrp1" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp2" s3Name="1:ytbzentfcmdpwgrp2" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp3" s3Name="1:ytbzentfcmdpwgrp3" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp4" s3Name="1:ytbzentfcmdpwgrp4" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp5" s3Name="1:ytbzentfcmdpwgrp5" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp6" s3Name="1:ytbzentfcmdpwgrp6" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp7" s3Name="1:ytbzentfcmdpwgrp7" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp8" s3Name="1:ytbzentfcmdpwgrp8" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp9" s3Name="1:ytbzentfcmdpwgrp9" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp10" s3Name="1:ytbzentfcmdpwgrp10" />
+     </table>
+    </pane.split>
+   </layout.split>
+  </cell>
+ </layout.grid>
+</frame>
+

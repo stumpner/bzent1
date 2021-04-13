@@ -1,0 +1,17 @@
+:docinfo:
+= bzentrale1
+Documentation
+:nofooter:
+
+This document describes the bzentrale1 app.
+
+include::subpage.adoc[]
+
+include::additionalpage.adoc[]
+
+== About
+
+bzentrale1 +
+(C) Your Company
+
+https://your-website.com/

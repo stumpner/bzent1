@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frame SYSTEM "urn:x-abas.de:abasscreens-1.00.dtd">
+
+<frame customHelp="" frameType="T" stdHelp="25B.1">
+ <layout.grid>
+  <metainfo axis="row" grid="0" stretch="zoom" />
+  <metainfo axis="column" grid="0" stretch="zoom" />
+  <cell alignX="fill" alignY="fill" gridX="0" gridY="0">
+   <layout.notebook>
+    <pane.notebook msgId="bzentrale_owis$2">
+     <layout.grid>
+      <metainfo axis="column" grid="2" indent="large" />
+      <cell alignY="beginning" gridX="0" gridY="0">
+       <label msgId="bzentrale_owis_ftable_ytbzentpasswort" />
+      </cell>
+      <cell alignY="beginning" gridX="1" gridY="0">
+       <erpfield access="readOnly" s3Name="1:ytbzentpasswort" />
+      </cell>
+      <cell alignY="beginning" gridX="2" gridY="0">
+       <label msgId="bzentrale_owis_ftable_ytbzentmitarbeiter" />
+      </cell>
+      <cell alignY="beginning" gridX="3" gridY="0">
+       <erpfield access="readOnly" s3Name="1:ytbzentmitarbeiter" />
+      </cell>
+      <cell alignY="beginning" gridX="0" gridY="1">
+       <label msgId="bzentrale_owis_ftable_ytbzentmitarbeitername" />
+      </cell>
+      <cell alignY="beginning" gridX="1" gridY="1">
+       <erpfield access="readOnly" s3Name="1:ytbzentmitarbeitername" />
+      </cell>
+      <cell alignY="beginning" gridX="2" gridY="1">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp1" />
+      </cell>
+      <cell alignY="beginning" gridX="3" gridY="1">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp1" />
+      </cell>
+      <cell alignY="beginning" gridX="0" gridY="2">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp2" />
+      </cell>
+      <cell alignY="beginning" gridX="1" gridY="2">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp2" />
+      </cell>
+      <cell alignY="beginning" gridX="2" gridY="2">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp3" />
+      </cell>
+      <cell alignY="beginning" gridX="3" gridY="2">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp3" />
+      </cell>
+      <cell alignY="beginning" gridX="0" gridY="3">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp4" />
+      </cell>
+      <cell alignY="beginning" gridX="1" gridY="3">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp4" />
+      </cell>
+      <cell alignY="beginning" gridX="2" gridY="3">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp5" />
+      </cell>
+      <cell alignY="beginning" gridX="3" gridY="3">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp5" />
+      </cell>
+      <cell alignY="beginning" gridX="0" gridY="4">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp6" />
+      </cell>
+      <cell alignY="beginning" gridX="1" gridY="4">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp6" />
+      </cell>
+      <cell alignY="beginning" gridX="2" gridY="4">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp7" />
+      </cell>
+      <cell alignY="beginning" gridX="3" gridY="4">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp7" />
+      </cell>
+      <cell alignY="beginning" gridX="0" gridY="5">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp8" />
+      </cell>
+      <cell alignY="beginning" gridX="1" gridY="5">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp8" />
+      </cell>
+      <cell alignY="beginning" gridX="2" gridY="5">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp9" />
+      </cell>
+      <cell alignY="beginning" gridX="3" gridY="5">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp9" />
+      </cell>
+      <cell alignY="beginning" gridX="0" gridY="6">
+       <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp10" />
+      </cell>
+      <cell alignY="beginning" gridX="1" gridY="6">
+       <erpfield access="readOnly" s3Name="1:ytbzentfcmdpwgrp10" />
+      </cell>
+      <cell alignY="beginning" gridX="2" gridY="6" />
+      <cell alignY="beginning" gridX="3" gridY="6" />
+      <cell alignY="beginning" gridX="0" gridY="7" />
+      <cell alignY="beginning" gridX="1" gridY="7" />
+      <cell alignY="beginning" gridX="2" gridY="7" />
+      <cell alignY="beginning" gridX="3" gridY="7" />
+      <cell alignY="beginning" gridX="0" gridY="8" />
+      <cell alignY="beginning" gridX="1" gridY="8" />
+      <cell alignY="beginning" gridX="2" gridY="8" />
+      <cell alignY="beginning" gridX="3" gridY="8" />
+      <cell alignY="beginning" gridX="0" gridY="9" />
+      <cell alignY="beginning" gridX="1" gridY="9" />
+      <cell alignY="beginning" gridX="2" gridY="9" />
+      <cell alignY="beginning" gridX="3" gridY="9" />
+      <cell alignY="beginning" gridX="0" gridY="10" />
+      <cell alignY="beginning" gridX="1" gridY="10" />
+      <cell alignY="beginning" gridX="2" gridY="10" />
+      <cell alignY="beginning" gridX="3" gridY="10" />
+      <cell alignY="beginning" gridX="0" gridY="11" />
+      <cell alignY="beginning" gridX="1" gridY="11" />
+      <cell alignY="beginning" gridX="2" gridY="11" />
+      <cell alignY="beginning" gridX="3" gridY="11" />
+      <cell alignY="beginning" gridX="0" gridY="12" />
+      <cell alignY="beginning" gridX="1" gridY="12" />
+      <cell alignY="beginning" gridX="2" gridY="12" />
+      <cell alignY="beginning" gridX="3" gridY="12" />
+      <cell alignY="beginning" gridX="0" gridY="13" />
+      <cell alignY="beginning" gridX="1" gridY="13" />
+      <cell alignY="beginning" gridX="2" gridY="13" />
+      <cell alignY="beginning" gridX="3" gridY="13" />
+      <cell alignY="beginning" gridX="0" gridY="14" />
+      <cell alignY="beginning" gridX="1" gridY="14" />
+      <cell alignY="beginning" gridX="2" gridY="14" />
+      <cell alignY="beginning" gridX="3" gridY="14" />
+      <cell alignY="beginning" gridX="0" gridY="15" />
+      <cell alignY="beginning" gridX="1" gridY="15" />
+      <cell alignY="beginning" gridX="2" gridY="15" />
+      <cell alignY="beginning" gridX="3" gridY="15" />
+      <cell alignY="beginning" gridX="0" gridY="16" />
+      <cell alignY="beginning" gridX="1" gridY="16" />
+      <cell alignY="beginning" gridX="2" gridY="16" />
+      <cell alignY="beginning" gridX="3" gridY="16" />
+      <cell alignY="beginning" gridX="0" gridY="17" />
+      <cell alignY="beginning" gridX="1" gridY="17" />
+      <cell alignY="beginning" gridX="2" gridY="17" />
+      <cell alignY="beginning" gridX="3" gridY="17" />
+      <cell alignY="beginning" gridX="0" gridY="18" />
+      <cell alignY="beginning" gridX="1" gridY="18" />
+      <cell alignY="beginning" gridX="2" gridY="18" />
+      <cell alignY="beginning" gridX="3" gridY="18" />
+      <cell alignY="beginning" gridX="0" gridY="19" />
+      <cell alignY="beginning" gridX="1" gridY="19" />
+      <cell alignY="beginning" gridX="2" gridY="19" />
+      <cell alignY="beginning" gridX="3" gridY="19" />
+     </layout.grid>
+    </pane.notebook>
+   </layout.notebook>
+  </cell>
+ </layout.grid>
+</frame>
+
