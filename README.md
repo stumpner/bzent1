@@ -1,4 +1,4 @@
-# bzentrale1
+# abas Benutzerzentrale (bzentrale1)
 This is the source code of bzentrale1, an abas Essentials App build for managing Users and UCM Menues.
 
 ## General setup

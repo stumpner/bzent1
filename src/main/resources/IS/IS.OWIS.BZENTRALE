@@ -1,4 +1,4 @@
-V#22
+V#21
 K#0#BZENTRALE#Benutzerzentrale#(65)#isrein/screen.OWIS.BZENTRALE#25B.1##
 K#(0)#(0)#100000##0#0#BZentrale#1
 K#0#(1)#
@@ -69,16 +69,16 @@ Z#0#isisref##0####(0)######0#0#0#0##0##
 Z#0#isselect##0####(1)######0#0#0#0##0##
 Z#0#isauswahl##0####(1)######0#0#0#0##0##
 Z#0#isstufe##0####(1)######0#0#0#0##0##
-Z#0#isbstart##0####(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####0#0#0#0##0##
+Z#0#isbstart##0####(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####0#0#0#0##0##
 Z#0#isstartzeit##0####(0)######0#0#0#0##0##
-Z#1#isybzentucm#GL25#0#UCM Datei#(65)#(65)#(2)######1#1#0#0##0##
-Z#1#isybzentucmwaehlen#BU3#0#UCM wÑhlen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isynewucm#GL15#0#Arbeitsgruppenseite hinzufuegen#(65)#(65)#(2)######1#1#0#0##0##
+Z#1#isyadducm#BU3#0#hinzufuegen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isynewucmpos#I1#0#Einfuegen an Position#(65)#(65)#(2)######1#1#0#0##0##
+Z#1#isydelucm#BU3#0#Arbeitsgruppenseite entfernen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isygenallucm#BU3#0#ALL.ucm erstellen#(65)#(65)#(1)######1#1#0#0##0##
 Z#1#isyabteilung#GL15#0#Abteilung#(65)#(65)#(2)######1#1#0#0##0##
-Z#1#isygenallucm#BU3#0#ALL.ucm erstellen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
-Z#1#isydelucm#BU3#0#Arbeitsgruppenseite entfernen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
-Z#1#isynewucmpos#I1#0#EinfÅgen an Position#(65)#(65)#(2)######1#1#0#0##0##
-Z#1#isyadducm#BU3#0#hinzufÅgen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
-Z#1#isynewucm#GL15#0#Arbeitsgruppenseite hinzufÅgen#(65)#(65)#(2)######1#1#0#0##0##
+Z#1#isybzentucmwaehlen#BU3#0#UCM waehlen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isybzentucm#GL25#0#UCM Datei#(65)#(65)#(2)######1#1#0#0##0##
 Z#0#ittabnr##1####(0)######0#0#0#0##0##
 Z#0#itzid##1####(0)######0#0#0#0##0##
 Z#0#itzn##1####(0)######0#0#0#0##0##
@@ -100,7 +100,7 @@ Z#0#istmenuean##1####(0)######0#0#0#0##0##
 Z#0#istmenueendeaktion##1####(0)######0#0#0#0##0##
 Z#2#isytbzentpasswort#P12:11#1#Passwortsatz#(65)#(65)#(0)######1#1#0#0##0##
 Z#2#isytbzentmitarbeiter#P11:1#1#Mitarbeiter#(65)#(65)#(0)######1#1#0#0##0##
-Z#2#isytbzentmitarbeitername#PT11:1#1#Mitarbeiter Name#(65)#(65)#(0)######1#3#0#0##0##
+Z#2#isytbzentmitarbname#PT11:1#1#Mitarbeiter Name#(65)#(65)#(0)######1#3#0#0##0##
 Z#2#isytbzentfcmdpwgrp1#GL40#1#Datei Arbeitsgruppenseite 1#(65)#(65)#(0)######1#1#0#0##0##
 Z#2#isytbzentfcmdpwgrp2#GL40#1#Datei Arbeitsgruppenseite 2#(65)#(65)#(0)######1#1#0#0##0##
 Z#2#isytbzentfcmdpwgrp3#GL40#1#Datei Arbeitsgruppenseite 3#(65)#(65)#(0)######1#1#0#0##0##

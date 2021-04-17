@@ -1,0 +1,8 @@
+pluginManagement {
+    repositories {
+        maven {
+            url = "https://artifactory.abas.sh/artifactory/abas.maven-public/"
+        }
+        gradlePluginPortal()
+    }
+}

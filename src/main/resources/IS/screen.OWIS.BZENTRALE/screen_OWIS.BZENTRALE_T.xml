@@ -23,10 +23,10 @@
        <erpfield access="readOnly" s3Name="1:ytbzentmitarbeiter" />
       </cell>
       <cell alignY="beginning" gridX="0" gridY="1">
-       <label msgId="bzentrale_owis_ftable_ytbzentmitarbeitername" />
+       <label msgId="bzentrale_owis_ftable_ytbzentmitarbname" />
       </cell>
       <cell alignY="beginning" gridX="1" gridY="1">
-       <erpfield access="readOnly" s3Name="1:ytbzentmitarbeitername" />
+       <erpfield access="readOnly" s3Name="1:ytbzentmitarbname" />
       </cell>
       <cell alignY="beginning" gridX="2" gridY="1">
        <label msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp1" />
