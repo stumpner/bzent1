@@ -17,7 +17,9 @@
         <cell alignY="beginning" gridX="1" gridY="0">
          <erpfield s3Name="0:yabteilung" />
         </cell>
-        <cell alignY="beginning" gridX="2" gridY="0" />
+        <cell alignY="beginning" gridX="2" gridY="0">
+         <erpfield dimX="0" msgId="bzentrale_owis_fhead_yabteilungwaehlen" s3Name="0:yabteilungwaehlen" />
+        </cell>
         <cell alignY="beginning" gridX="3" gridY="0" />
         <cell alignY="beginning" gridX="0" gridY="1">
          <label msgId="bzentrale_owis_fhead_ybzentucm" />
@@ -29,6 +31,14 @@
          <erpfield dimX="0" msgId="bzentrale_owis_fhead_ybzentucmwaehlen" s3Name="0:ybzentucmwaehlen" />
         </cell>
         <cell alignY="beginning" gridX="3" gridY="1" />
+        <cell gridX="0" gridY="2" />
+        <cell gridX="1" gridY="2" sizeX="3">
+         <erpfield msgId="bzentrale_owis_fhead_ykeineinaktiven" s3Name="0:ykeineinaktiven" />
+        </cell>
+        <cell gridX="0" gridY="3" />
+        <cell gridX="1" gridY="3" />
+        <cell gridX="2" gridY="3" />
+        <cell gridX="3" gridY="3" />
        </layout.grid>
       </pane.notebook>
       <pane.notebook msgId="bzentrale_owis$3">
@@ -54,8 +64,10 @@
     <pane.split>
      <table>
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentpasswort" s3Name="1:ytbzentpasswort" />
+      <erpfield access="readOnly" msgId="bzentrale_owis_ftable_ytinaktiv" s3Name="1:ytinaktiv" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentmitarbeiter" s3Name="1:ytbzentmitarbeiter" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentmitarbname" s3Name="1:ytbzentmitarbname" />
+      <erpfield access="readOnly" msgId="bzentrale_owis_ftable_ytabteilung" s3Name="1:ytabteilung" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp1" s3Name="1:ytbzentfcmdpwgrp1" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp2" s3Name="1:ytbzentfcmdpwgrp2" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp3" s3Name="1:ytbzentfcmdpwgrp3" />

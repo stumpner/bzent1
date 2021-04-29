@@ -75,10 +75,13 @@ Z#1#isynewucm#GL15#0#Arbeitsgruppenseite hinzufuegen#(65)#(65)#(2)######1#1#0#0#
 Z#1#isyadducm#BU3#0#hinzufuegen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
 Z#1#isynewucmpos#I1#0#Einfuegen an Position#(65)#(65)#(2)######1#1#0#0##0##
 Z#1#isydelucm#BU3#0#Arbeitsgruppenseite entfernen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
-Z#1#isygenallucm#BU3#0#ALL.ucm erstellen#(65)#(65)#(1)######1#1#0#0##0##
+Z#1#isygenallucm#BU3#0#ALL.ucm erstellen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
 Z#1#isyabteilung#GL15#0#Abteilung#(65)#(65)#(2)######1#1#0#0##0##
 Z#1#isybzentucmwaehlen#BU3#0#UCM waehlen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
 Z#1#isybzentucm#GL25#0#UCM Datei#(65)#(65)#(2)######1#1#0#0##0##
+Z#1#isykommandosuchen#BU3#0#Kommando in UCM Datei suchen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
+Z#1#isykeineinaktiven#B#0#Inaktive Passwortsätze nicht anzeigen#(65)#(65)#(2)######1#1#0#0##0##
+Z#1#isyabteilungwaehlen#BU3#0#Abteilung wählen#(65)#(65)#(1)#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent#java:com.sprecherautomation.esdk.bzent.BZentraleEventHandler@bzent####1#1#0#0##0##
 Z#0#ittabnr##1####(0)######0#0#0#0##0##
 Z#0#itzid##1####(0)######0#0#0#0##0##
 Z#0#itzn##1####(0)######0#0#0#0##0##
@@ -111,3 +114,5 @@ Z#2#isytbzentfcmdpwgrp7#GL40#1#Datei Arbeitsgruppenseite 7#(65)#(65)#(0)######1#
 Z#2#isytbzentfcmdpwgrp8#GL40#1#Datei Arbeitsgruppenseite 8#(65)#(65)#(0)######1#1#0#0##0##
 Z#2#isytbzentfcmdpwgrp9#GL40#1#Datei Arbeitsgruppenseite 9#(65)#(65)#(0)######1#1#0#0##0##
 Z#2#isytbzentfcmdpwgrp10#GL40#1#Datei Arbeitsgruppenseite 10#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytinaktiv#B#1#Inaktiv#(65)#(65)#(0)######1#1#0#0##0##
+Z#2#isytabteilung#GL15#1#Abteilung#(65)#(65)#(0)######1#1#0#0##0##

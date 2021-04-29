@@ -1,5 +1,7 @@
 package com.sprecherautomation.esdk.bzent;
 
+import de.abas.eks.jfop.remote.FO;
+import de.abas.erp.api.gui.MenuBuilder;
 import de.abas.erp.axi.event.EventException;
 import de.abas.erp.axi.screen.ScreenControl;
 import de.abas.erp.axi2.EventHandlerRunner;
@@ -17,14 +19,13 @@ import de.abas.erp.db.selection.Conditions;
 import de.abas.erp.db.selection.SelectionBuilder;
 import de.abas.erp.jfop.rt.api.annotation.RunFopWith;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.HashSet;
-import java.util.Set;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.*;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @EventHandler(head = BZentrale.class, row = BZentrale.Row.class)
 @RunFopWith(EventHandlerRunner.class)
@@ -61,6 +62,7 @@ public class BZentraleEventHandler {
             if (!head.getYabteilung().isEmpty()) {
                 //Selektion auf Abteilung
                 sb.add(Conditions.eq(Password.META.deptUser, head.getYabteilung()));
+                sb.add(Conditions.eq(Password.META.pwdInactive, false));
             }
 
             head.table().clear();
@@ -68,6 +70,8 @@ public class BZentraleEventHandler {
                 BZentrale.Row r = head.table().appendRow();
                 r.setYtbzentpasswort(p);
                 r.setYtbzentmitarbeiter(p.getEmployeePwdRef());
+                r.setYtabteilung(p.getDeptUser());
+                r.setYtinaktiv(p.getPwdInactive());
 
                 fillGrpTableRowFields(p,r);
             }
@@ -87,16 +91,19 @@ public class BZentraleEventHandler {
     @ButtonEventHandler(field="ybzentucmwaehlen", type = ButtonEventType.AFTER)
     public void ucmWaehlenAfter(ButtonEvent event, ScreenControl screenControl, DbContext ctx, BZentrale head) throws EventException {
 
-        File file = new File("win");
-        ctx.out().println("Lokales ucm Verzeichnis "+file.getAbsolutePath());
-
         try {
-            ctx.out().println("Folgende Dateien existieren:");
-            Set<String> set = listFilesUsingDirectoryStream("win/ucm");
+            MenuBuilder<String> mb = new MenuBuilder<>(ctx, "wählen");
+            List<String> set = listFilesUsingDirectoryStream("win/ucm");
 
             for (String s : set) {
-                ctx.out().println("- "+s);
+                mb.addItem(s,s);
             }
+
+            String result = mb.show();
+            if (result.toUpperCase().endsWith(".UCM")) {
+                result = result.substring(0,result.length()-4);
+            }
+            head.setYbzentucm(result);
 
         } catch (IOException e) {
             ctx.out().println("Fehler");
@@ -200,25 +207,152 @@ public class BZentraleEventHandler {
 
     @ButtonEventHandler(field="ygenallucm", type = ButtonEventType.BEFORE)
     public void ygenallucmBefore(ButtonEvent event, ScreenControl screenControl, DbContext ctx, BZentrale head) throws EventException {
-        throw new EventException("Diese Funktion ist noch nicht implementiert!");
+        //throw new EventException("Diese Funktion ist noch nicht implementiert!");
     }
 
     @ButtonEventHandler(field="ygenallucm", type = ButtonEventType.AFTER)
     public void ygenallucmAfter(ButtonEvent event, ScreenControl screenControl, DbContext ctx, BZentrale head) throws EventException {
-        //TODO
+
+        ctx.out().println("all.ucm wird generiert");
+
+        try {
+            List<String> set = listFilesUsingDirectoryStream("win/ucm");
+
+            File allFile = new File("win/ucm/ALL.ucm");
+            if (allFile.exists()) { allFile.delete(); }
+            FileOutputStream allFs = new FileOutputStream(allFile);
+            OutputStreamWriter allOw = new OutputStreamWriter(allFs, "UTF-16LE");
+            BufferedWriter allWriter = new BufferedWriter(allOw);
+
+            int ic = 65279; //Spezielles Steuerzeichen auf Position 1 wird erwartet von abas
+            char beginChar = (char)ic;
+
+            allWriter.write(beginChar+"TITLE TEXT \"ALL\";");
+            allWriter.newLine();
+
+            for (String s : set) {
+
+                ctx.out().println("File: "+s);
+
+                if (!s.equalsIgnoreCase("ALL.ucm")) {
+
+                    allWriter.write("TREENODE TEXT \""+s+"\";");
+                    allWriter.newLine();
+
+                    //ucm File ist codiert in UTF-16LE? vielleicht nur wegen Docker?
+                    BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("win/ucm/" + s), "UTF-16LE"));
+
+                    String fileContent = new String();
+
+                    int zeileNr = 0;
+                    String zeile = null;
+                    while ((zeile = br.readLine()) != null) {
+                        zeileNr = zeileNr + 1;
+                        fileContent = fileContent + zeile;
+
+                        if (!zeile.contains("TITLE TEXT")) {
+
+                            if (zeileNr==1) { //Erste Zeile im File, das Steuerzeichen \65279 auf pos 1 entfernen
+                                allWriter.write(zeile.substring(1));
+                            } else {
+                                allWriter.write(zeile);
+                            }
+                            allWriter.newLine();
+
+                        }
+
+                    }
+
+                    br.close();
+
+                    allWriter.write("END");
+                    allWriter.newLine();
+
+                }
+
+            }
+
+            allWriter.close();
+
+        } catch (IOException e) {
+            ctx.out().println("Fehler "+e.getMessage());
+        }
+
     }
 
-    public Set<String> listFilesUsingDirectoryStream(String dir) throws IOException {
-        Set<String> fileList = new HashSet<>();
+    public List<String> listFilesUsingDirectoryStream(String dir) throws IOException {
+        Set<String> fileSet = new HashSet<>();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(dir))) {
             for (Path path : stream) {
                 if (!Files.isDirectory(path)) {
-                    fileList.add(path.getFileName()
+                    fileSet.add(path.getFileName()
                             .toString());
                 }
             }
         }
+
+        //Sortieren
+        List<String> fileList = fileSet.stream().collect(Collectors.toList());
+        Collections.sort(fileList, (o1,o2) -> o1.compareTo(o2));
         return fileList;
+    }
+
+    @ButtonEventHandler(field="yabteilungwaehlen", type = ButtonEventType.AFTER)
+    public void yabteilungwaehlenAfter(ButtonEvent event, ScreenControl screenControl, DbContext ctx, BZentrale head) throws EventException {
+
+        MenuBuilder<String> mb = new MenuBuilder<>(ctx, "wählen");
+
+        SelectionBuilder<Password> sb = SelectionBuilder.create(Password.class);
+
+        HashMap<String,String> abtSet = new HashMap<String,String>();
+
+        for (Password p : ctx.createQuery(sb.build())) {
+            if (!p.getDeptUser().isEmpty()) {
+                abtSet.put(p.getDeptUser(), "X");
+            }
+        }
+
+        for (String a : abtSet.keySet()) {
+            mb.addItem(a,a);
+        }
+
+        String s = mb.show();
+        head.setYabteilung(s);
+
+    }
+
+    @ButtonEventHandler(field="ykommandosuchen", type = ButtonEventType.AFTER)
+    public void ykommandosuchenAfter(ButtonEvent event, ScreenControl screenControl, DbContext ctx, BZentrale head) throws EventException {
+
+        String k = FO.lesen(new String[] {"Kommando in UCM Datei suchen","Nach welchem Kommando soll in den ucm-Dateien gesucht werden?"});
+
+        ctx.out().println("Gesucht wird das Kommando: "+k+" in allen UCM Dateien");
+
+        try {
+            List<String> set = listFilesUsingDirectoryStream("win/ucm");
+
+            for (String s : set) {
+
+                //ucm File ist codiert in UTF-16LE? vielleicht nur wegen Docker?
+                BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("win/ucm/"+s), "UTF-16LE"));
+
+                String fileContent = new String();
+
+                String zeile = null;
+                while ((zeile = br.readLine()) != null) {
+                    fileContent = fileContent+zeile;
+
+                    if (zeile.contains(k)) {
+                        ctx.out().println(s+": "+zeile);
+                    }
+                }
+
+            }
+
+        } catch (IOException e) {
+            ctx.out().println("Fehler "+e.getMessage());
+        }
+
     }
 
 }

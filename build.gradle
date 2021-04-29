@@ -62,6 +62,9 @@ dependencies {
     provided "de.abas.homedir:abas-erp-common:1.0.0"
     provided "de.abas.homedir:abas-enums:1.0.0"
 
+    provided "de.abas.homedir:abas-erpapi:1.0.0"
+    provided "de.abas.homedir:abas-jfopapi:1.0.0"
+
     implementation "de.abas.homedir:abas-axi2:1.0.0"
     implementation "de.abas.homedir:abas-axi:1.0.0"
     implementation "de.abas.homedir:abas-db-internal:1.0.0"
@@ -79,4 +82,11 @@ dependencies {
 
     integTestImplementation "de.abas.esdk.test.util:esdk-test-utils:0.0.3"
     integTestImplementation "de.abas.homedir:abas-db-util:1.0.0"
+}
+
+esdk {
+    app {
+        shared = true
+        parent = "DEFAULT"
+    }
 }

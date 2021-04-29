@@ -4,6 +4,7 @@
 <popups>
  <popup id="menuExecute">
   <menuitem msgId="bzentrale_owis_mhead_ygenallucm" s3Name="0:ygenallucm" />
+  <menuitem msgId="bzentrale_owis_mhead_ykommandosuchen" s3Name="0:ykommandosuchen" />
  </popup>
  <popup id="menuTable" />
 </popups>
