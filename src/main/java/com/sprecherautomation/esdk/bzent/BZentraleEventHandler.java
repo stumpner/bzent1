@@ -62,22 +62,42 @@ public class BZentraleEventHandler {
             if (!head.getYabteilung().isEmpty()) {
                 //Selektion auf Abteilung
                 sb.add(Conditions.eq(Password.META.deptUser, head.getYabteilung()));
-                sb.add(Conditions.eq(Password.META.pwdInactive, false));
+                if (head.getYkeineinaktiven()) { sb.add(Conditions.eq(Password.META.pwdInactive, false)); }
             }
 
             head.table().clear();
             for (Password p : ctx.createQuery(sb.build())) {
-                BZentrale.Row r = head.table().appendRow();
-                r.setYtbzentpasswort(p);
-                r.setYtbzentmitarbeiter(p.getEmployeePwdRef());
-                r.setYtabteilung(p.getDeptUser());
-                r.setYtinaktiv(p.getPwdInactive());
 
-                fillGrpTableRowFields(p,r);
+                if (match(head, p)) { //Prüfen ob der Datensatz angezeigt werden soll
+                    BZentrale.Row r = head.table().appendRow();
+                    r.setYtbzentpasswort(p);
+                    r.setYtbzentmitarbeiter(p.getEmployeePwdRef());
+                    r.setYtabteilung(p.getDeptUser());
+                    r.setYtinaktiv(p.getPwdInactive());
+
+                    fillGrpTableRowFields(p, r);
+                }
             }
 
 
 
+    }
+
+    /**
+     * Prüfen ob der Datensatz angezeigt werden soll:
+     * Wird benötigt für und/oder verknüpfungen die sich über eine Selektion nicht lösen lassen
+     * @param head
+     * @param p
+     * @return
+     */
+    private boolean match(BZentrale head, Password p) {
+
+        if (head.getYkeineinaktiven()) {
+            if (p.isPwdInactive()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private void fillGrpTableRowFields(Password p, BZentrale.Row r) {
@@ -100,10 +120,13 @@ public class BZentraleEventHandler {
             }
 
             String result = mb.show();
-            if (result.toUpperCase().endsWith(".UCM")) {
-                result = result.substring(0,result.length()-4);
+
+            if (result!=null) {
+                if (result.toUpperCase().endsWith(".UCM")) {
+                    result = result.substring(0, result.length() - 4);
+                }
+                head.setYbzentucm(result);
             }
-            head.setYbzentucm(result);
 
         } catch (IOException e) {
             ctx.out().println("Fehler");

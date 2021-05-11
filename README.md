@@ -1,6 +1,8 @@
 # abas Benutzerzentrale (bzentrale1)
 This is the source code of bzentrale1, an abas Essentials App build for managing Users and UCM Menues.
 
+Use this ESDK App on your own risk!
+
 ## General setup
 If you are using proxies, add a gradle.properties file to your $GRADLE_USER_HOME.
 

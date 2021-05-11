@@ -64,10 +64,10 @@
     <pane.split>
      <table>
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentpasswort" s3Name="1:ytbzentpasswort" />
-      <erpfield access="readOnly" msgId="bzentrale_owis_ftable_ytinaktiv" s3Name="1:ytinaktiv" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytinaktiv" s3Name="1:ytinaktiv" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentmitarbeiter" s3Name="1:ytbzentmitarbeiter" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentmitarbname" s3Name="1:ytbzentmitarbname" />
-      <erpfield access="readOnly" msgId="bzentrale_owis_ftable_ytabteilung" s3Name="1:ytabteilung" />
+      <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytabteilung" s3Name="1:ytabteilung" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp1" s3Name="1:ytbzentfcmdpwgrp1" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp2" s3Name="1:ytbzentfcmdpwgrp2" />
       <erpfield access="readOnly" dimX="0" msgId="bzentrale_owis_ftable_ytbzentfcmdpwgrp3" s3Name="1:ytbzentfcmdpwgrp3" />
